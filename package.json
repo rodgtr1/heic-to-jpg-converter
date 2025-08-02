@@ -1,0 +1,35 @@
+{
+  "name": "heic-converter",
+  "private": false,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A fast and simple desktop application for converting HEIC/HEIF images to high-quality JPEG format",
+  "author": "HEIC Converter Team",
+  "license": "MIT",
+  "keywords": ["heic", "jpeg", "converter", "tauri", "desktop", "image"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/heic-converter.git"
+  },
+  "homepage": "https://github.com/yourusername/heic-converter#readme",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-opener": "^2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.3",
+    "@tauri-apps/cli": "^2"
+  }
+}

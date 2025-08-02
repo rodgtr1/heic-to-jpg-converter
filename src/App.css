@@ -1,0 +1,324 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #0f0f0f;
+  background-color: #f6f6f6;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.container {
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow-y: auto;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+  color: #333;
+}
+
+.container > p {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.drop-zone {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 1.5rem 1rem;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background-color: #fafafa;
+  margin-bottom: 1rem;
+}
+
+.drop-zone.has-files {
+  min-height: auto;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+
+.drop-message {
+  text-align: center;
+}
+
+
+.drop-message p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+
+button {
+  border-radius: 8px;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 0.5rem;
+}
+
+.download-btn {
+  background-color: #007acc;
+  color: white;
+}
+
+.download-btn:hover {
+  background-color: #005a9c;
+  transform: translateY(-2px);
+}
+
+.reset-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.reset-btn:hover {
+  background-color: #545b62;
+  transform: translateY(-2px);
+}
+
+/* File List Styles */
+.file-list {
+  width: 100%;
+  max-width: 100%;
+}
+
+.file-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.file-list-header span {
+  font-weight: 600;
+  color: #333;
+}
+
+.add-more-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.add-more-btn:hover {
+  background-color: #1e7e34;
+  transform: translateY(-1px);
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.file-item:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.file-info {
+  flex: 1;
+  text-align: left;
+}
+
+.file-name {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.file-size {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.file-progress {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.status-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.queued {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  border: 1px solid #dee2e6;
+}
+
+.status-badge.completed {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.status-badge.failed {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.progress-bar {
+  width: 100px;
+  height: 8px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #28a745, #20c997);
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+.status-text {
+  font-size: 0.8rem;
+  color: #666;
+  white-space: nowrap;
+}
+
+.file-actions {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.download-btn.small {
+  padding: 0.4rem 0.6rem;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.remove-btn {
+  background-color: transparent;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  margin: 0;
+  margin-left: 0.5rem;
+  min-width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-btn:hover {
+  background-color: #dc3545;
+  color: white;
+  transform: none;
+}
+
+.error-message {
+  font-size: 0.75rem;
+  color: #dc3545;
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f6f6f6;
+    background-color: #1a1a1a;
+  }
+
+  h1 {
+    color: #fff;
+  }
+
+  .container > p {
+    color: #ccc;
+  }
+
+  .drop-zone {
+    background-color: #2a2a2a;
+    border-color: #555;
+  }
+
+
+  .drop-message p {
+    color: #ccc;
+  }
+
+  .file-list-header {
+    border-bottom-color: #444;
+  }
+
+  .file-list-header span {
+    color: #fff;
+  }
+
+  .file-item {
+    background: #2a2a2a;
+    border-color: #444;
+  }
+
+  .file-name {
+    color: #fff;
+  }
+
+  .file-size {
+    color: #ccc;
+  }
+
+  .status-text {
+    color: #ccc;
+  }
+
+  .progress-bar {
+    background-color: #444;
+  }
+
+  .status-badge.queued {
+    background-color: #444;
+    color: #ccc;
+    border-color: #555;
+  }
+}

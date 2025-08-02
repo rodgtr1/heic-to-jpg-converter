@@ -1,0 +1,15 @@
+{
+  "conversion": {
+    "jpegQuality": 90,
+    "maxFileSizeMB": 100
+  },
+  "ui": {
+    "windowWidth": 600,
+    "windowHeight": 500,
+    "maxConcurrentConversions": 5
+  },
+  "storage": {
+    "cleanupTempFiles": true,
+    "tempFileRetentionHours": 24
+  }
+}

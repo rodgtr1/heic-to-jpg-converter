@@ -19,16 +19,10 @@ A fast and simple desktop application for converting HEIC/HEIF images to high-qu
 
 ## Installation
 
-### Option 1: Download Pre-built App
-1. Download the latest release from the releases page
-2. Move the app to your Applications folder
-3. Right-click and select "Open" to bypass Gatekeeper on first launch
-
-### Option 2: Build from Source
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/heic-converter.git
-cd heic-converter
+git clone https://github.com/rodgtr1/heic-to-jpg-converter.git
+cd heic-to-jpg-converter
 
 # Install dependencies
 npm install

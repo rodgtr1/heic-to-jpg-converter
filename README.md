@@ -2,6 +2,8 @@
 
 A fast and simple desktop application for converting HEIC/HEIF images to high-quality JPEG format. Built with Tauri and React for optimal performance and native feel.
 
+<img width="592" height="495" alt="Screenshot 2025-08-02 at 12 51 06 PM" src="https://github.com/user-attachments/assets/a6c4d2d7-de0d-4bb1-ae7f-a6d95d8b29d9" />
+
 ## Features
 
 - **Batch Processing**: Convert multiple HEIC files simultaneously
